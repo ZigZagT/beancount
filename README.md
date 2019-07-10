@@ -1,20 +1,32 @@
 # Beancount
 
-This repo contains a fork of the [Beancount](https://bitbucket.org/blais/beancount/) project.
+[![Build Status](https://travis-ci.com/BananaWanted/beancount.svg?branch=master)](https://travis-ci.com/BananaWanted/beancount)
 
-Branch **upstream** contains the upstream beancount source synced from [BitBucket](https://bitbucket.org/blais/beancount/) daily.
+This repo contains a fork of the [Beancount][1] project.
 
-Branch **master** contains a fork from **upstream**, plus some additional changes described below.
+Branch *upstream* contains the upstream beancount source synced from [BitBucket][1] daily.
+
+Branch *master* contains a fork from *upstream*, plus some additional changes described below.
 
 ## Purposes of tis Repo
 - Provide a VCS interface in Git instead of in Mercurial.
-    - The author actually has an official [GitHub Repo](https://github.com/beancount/beancount) but is quite out dated.
+    - The author actually has an official [GitHub Repo][2] but is quite out dated.
 - Integrate with CI, run tests regularly with updated dependencies.
-- Ship a [Docker image](https://hub.docker.com/r/bananawanted/beancount).
+- Ship a [Docker image][3].
 - Additional features/fixes not yet accepted by upstream (see complete list below)
 
 ## List of Changes
 Checkout line-by-line diff [here](https://github.com/BananaWanted/beancount/pull/1)
 
-- [Docker image](https://hub.docker.com/r/bananawanted/beancount) contains bean-* cli tools.
+### Docker Support
+A [Docker image][3] is built for containing bean-* cli tools.
+```
+docker run -it --rm -v $(pwd):/data bananawanted/beancount bean-check /dev/null
+```
+
+### Others
 - CI setup running tests regularly.
+
+[1]: https://bitbucket.org/blais/beancount/src/default/
+[2]: https://github.com/beancount/beancount
+[3]: https://hub.docker.com/r/bananawanted/beancount
