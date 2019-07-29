@@ -2,17 +2,17 @@
 
 [![Build Status](https://travis-ci.com/BananaWanted/beancount.svg?branch=master)](https://travis-ci.com/BananaWanted/beancount)
 
-This repo contains a fork of the [Beancount][1] project.
+This repo contains a fork of the [Beancount project][1]. Original documentations could be found [here on Google Doc](http://furius.ca/beancount/doc/index).
 
-Branch *upstream* contains the upstream beancount source synced from [BitBucket][1] daily.
+Branch *upstream* contains the upstream beancount source synced from [BitBucket repo][1] daily.
 
 Branch *master* contains a fork from *upstream*, plus some additional changes described below.
 
 ## Purposes of tis Repo
 - Provide a VCS interface in Git instead of in Mercurial.
-    - The author actually has an official [GitHub Repo][2] but is quite out dated.
+    - The author actually has an [official GitHub Repo][2] but is quite out dated.
 - Integrate with CI, run tests regularly with updated dependencies.
-- Ship a [Docker image][3].
+- Ship a [Docker image via DockerHub][3].
 - Additional features/fixes not yet accepted by upstream (see complete list below)
 
 ## List of Changes
