@@ -1,6 +1,6 @@
 FROM python:3
-ARG BRANCH=master
+COPY . /tmp/beancount
 RUN apt-get install -y \
-    && pip install git+https://github.com/BananaWanted/beancount.git@$BRANCH \
+    && pip install /tmp/beancount \
     && bean-check /dev/null
 WORKDIR /data

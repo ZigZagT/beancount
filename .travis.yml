@@ -59,7 +59,6 @@ script:
   - docker build
     -t $DOCKER_HUB_USERNAME/beancount
     -t $DOCKER_HUB_USERNAME/beancount:$TRAVIS_BRANCH
-    --build-arg BRANCH=$(git rev-parse --verify HEAD)
     --rm .
 
 after_success:
