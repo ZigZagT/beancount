@@ -16,7 +16,7 @@ Branch *master* contains a fork from *upstream*, plus some additional changes de
 - Additional features/fixes not yet accepted by upstream (see complete list below)
 
 ## List of Changes
-Checkout line-by-line diff [here](https://github.com/BananaWanted/beancount/pull/1)
+Checkout line-by-line diff [here](https://github.com/BananaWanted/beancount/compare/upstream...master)
 
 ### Docker Support
 A [Docker image][3] is built for containing bean-* cli tools.
