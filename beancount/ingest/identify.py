@@ -65,7 +65,7 @@ def find_imports(importer_config, files_or_directories, logfile=None):
                 if matched:
                     matching_importers.append(importer)
             except Exception as exc:
-                logging.error("Importer %s.identify() raised an unexpected error: %s",
+                logging.exception("Importer %s.identify() raised an unexpected error: %s",
                               importer.name(), exc)
 
         yield (filename, matching_importers)
