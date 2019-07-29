@@ -3,7 +3,8 @@ language: python
 git:
   depth: false
 branches:
-  except:
+  only:
+    - master
     - upstream
 addons:
   apt:
@@ -49,7 +50,7 @@ before_script:
   - git checkout $TRAVIS_BRANCH
   - git merge -m 'sync upstream from https://bitbucket.org/blais/beancount' upstream
   # checkout & merge pull request branch if applicable
-  - if [[ -n "$TRAVIS_PULL_REQUEST_BRANCH" ]]; then git checkout -b $TRAVIS_PULL_REQUEST_BRANCH && git merge origin/$TRAVIS_PULL_REQUEST_BRANCH; fi
+  - if [[ -n "$TRAVIS_PULL_REQUEST_BRANCH" ]]; then git checkout -b $TRAVIS_PULL_REQUEST_BRANCH && git pull --commit origin $TRAVIS_PULL_REQUEST_BRANCH; fi
   # install the package
   - pip install -r requirements.txt
   - pip install . pylint pyflakes tox
