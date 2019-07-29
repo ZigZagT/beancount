@@ -68,7 +68,7 @@ after_success:
   # push to DockerHub
   - docker push $DOCKER_HUB_USERNAME/beancount:${TRAVIS_PULL_REQUEST_BRANCH:-$TRAVIS_BRANCH}
   # for latest tag, only push when: non-PR job && master branch && no merge happens on master in the job
-  - if [[ -z "$TRAVIS_PULL_REQUEST_BRANCH" -a "$TRAVIS_BRANCH" = "master" -a "$(git rev-parse --verify master)" = "$(git rev-parse --verify origin/master)" ]]; then docker push $DOCKER_HUB_USERNAME/beancount; fi
+  - if [[ -z "$TRAVIS_PULL_REQUEST_BRANCH" && "$TRAVIS_BRANCH" = "master" && "$(git rev-parse --verify master)" = "$(git rev-parse --verify origin/master)" ]]; then docker push $DOCKER_HUB_USERNAME/beancount; fi
   # push to GitHub, checkout to targeted branch beforhand in case this is a pull request job
   - git checkout $TRAVIS_BRANCH
   - git push origin $TRAVIS_BRANCH
