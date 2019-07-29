@@ -14,18 +14,18 @@ addons:
 services:
   - docker
 before_install:
-  # setup git
-  - git config --global user.name 'Travis CI'
-  - git config --global user.email 'contact@travis-ci.com'
-  - git remote remove origin
-  - git remote add origin git@github.com:BananaWanted/beancount.git
-  - git fetch origin
   # setup ssh
   - openssl aes-256-cbc -K $encrypted_3dd051e32a99_key -iv $encrypted_3dd051e32a99_iv -in github_deploy_key.enc -out github_deploy_key -d
   - chmod 600 github_deploy_key
   - eval $(ssh-agent -s)
   - ssh-add github_deploy_key
   - rm -f github_deploy_key
+  # setup git
+  - git config --global user.name 'Travis CI'
+  - git config --global user.email 'contact@travis-ci.com'
+  - git remote remove origin
+  - git remote add origin git@github.com:BananaWanted/beancount.git
+  - git fetch origin
   # setup mercurial
   - printf '[extensions]\nhgext.bookmarks =\nhggit =\n' > ~/.hgrc
   - sudo pip2 install -U 'hg+https://bitbucket.org/durin42/hg-git' brotli ipaddress pyOpenSSL ndg-httpsclient pyasn1
