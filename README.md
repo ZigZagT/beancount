@@ -8,20 +8,19 @@ Branch *upstream* contains the upstream beancount source synced from [BitBucket 
 
 Branch *master* contains a fork from *upstream*, plus some additional changes described below.
 
-## Purposes of tis Repo
+## This Repo
 - Provide a VCS interface in Git instead of in Mercurial.
     - The author actually has an [official GitHub Repo][2] but is quite out dated.
-- Integrate with CI, run tests regularly with updated dependencies.
+- Run tests regularly with updated dependencies (CI).
 - Ship a [Docker image via DockerHub][3].
 - Additional features/fixes not yet accepted by upstream (see complete list below)
 
-## List of Changes
 Checkout line-by-line diff [here](https://github.com/BananaWanted/beancount/compare/upstream...master)
 
 ### Docker Support
-A [Docker image][3] is built for containing bean-* cli tools.
+You can run `bean-*` cli tools in the [Docker image][3] provided by this repo:
 ```
-docker run -it --rm -v $(pwd):/data bananawanted/beancount bean-check /dev/null
+docker run -it --rm -v $(pwd):/data bananawanted/beancount bean-check --help
 ```
 
 ### Others
