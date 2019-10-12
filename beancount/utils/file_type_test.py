@@ -9,7 +9,7 @@ from beancount.utils import file_type
 
 class TestFileType(unittest.TestCase):
 
-    DATA_DIR = path.join(path.dirname(__file__), 'file_type')
+    DATA_DIR = path.join(path.dirname(__file__), 'file_type_testdata')
 
     def check_mime_type(self, example_file, expected_mime_types):
         if not isinstance(expected_mime_types, list):
@@ -83,3 +83,7 @@ class TestFileType(unittest.TestCase):
     @unittest.skipIf(not file_type.magic, 'python-magic is not installed')
     def test_bz2(self):
         self.check_mime_type('example.bz2', 'application/x-bzip2')
+
+
+if __name__ == '__main__':
+    main()
