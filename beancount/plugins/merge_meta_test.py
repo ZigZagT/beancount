@@ -3,6 +3,7 @@ __license__ = "GNU GPLv2"
 
 import datetime
 import tempfile
+import unittest
 
 from beancount import loader
 from beancount.parser import cmptest
@@ -115,4 +116,4 @@ class TestMergeMeta(cmptest.TestCase):
 
 
 if __name__ == '__main__':
-    main()
+    unittest.main()

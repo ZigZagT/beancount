@@ -2,6 +2,7 @@ __copyright__ = "Copyright (C) 2015-2016  Martin Blais"
 __license__ = "GNU GPLv2"
 
 import logging
+import unittest
 
 from beancount import loader
 from beancount.core import getters
@@ -139,4 +140,4 @@ class TestWillReport(test_utils.TestCase):
 
 
 if __name__ == '__main__':
-    main()
+    unittest.main()

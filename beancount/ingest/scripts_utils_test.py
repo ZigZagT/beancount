@@ -4,6 +4,7 @@ __license__ = "GNU GPLv2"
 from os import path
 import argparse
 import os
+import unittest
 
 from beancount.utils import test_utils
 from beancount.ingest import scripts_utils
@@ -103,4 +104,4 @@ class TestImplicitInvocationMethods(scripts_utils.TestScriptsBase):
 
 
 if __name__ == '__main__':
-    main()
+    unittest.main()

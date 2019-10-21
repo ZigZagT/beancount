@@ -1,6 +1,8 @@
 __copyright__ = "Copyright (C) 2015-2016  Martin Blais"
 __license__ = "GNU GPLv2"
 
+import unittest
+
 from beancount.parser import cmptest
 from beancount.plugins import auto_accounts
 from beancount import loader
@@ -40,4 +42,4 @@ class TestAutoInsertOpen(cmptest.TestCase):
 
 
 if __name__ == '__main__':
-    main()
+    unittest.main()

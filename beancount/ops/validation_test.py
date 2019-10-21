@@ -3,6 +3,7 @@ __license__ = "GNU GPLv2"
 
 import datetime
 import re
+import unittest
 
 from beancount.core import data
 from beancount.parser import cmptest
@@ -410,4 +411,4 @@ class TestValidateTolerances(cmptest.TestCase):
 
 
 if __name__ == '__main__':
-    main()
+    unittest.main()

@@ -1,6 +1,8 @@
 __copyright__ = "Copyright (C) 2016  Martin Blais"
 __license__ = "GNU GPLv2"
 
+import unittest
+
 from beancount import loader
 from beancount.parser import cmptest
 from beancount.core import data
@@ -128,4 +130,4 @@ class TestMerge(cmptest.TestCase):
 
 
 if __name__ == '__main__':
-    main()
+    unittest.main()

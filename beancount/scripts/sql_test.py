@@ -3,6 +3,7 @@ __license__ = "GNU GPLv2"
 
 import tempfile
 from os import path
+import unittest
 
 from beancount.utils import test_utils
 from beancount.scripts import sql
@@ -68,4 +69,4 @@ class TestScriptSQL(test_utils.TestCase):
 
 
 if __name__ == '__main__':
-    main()
+    unittest.main()

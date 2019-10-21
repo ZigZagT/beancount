@@ -6,6 +6,7 @@ __license__ = "GNU GPLv2"
 
 import datetime
 import textwrap
+import unittest
 from os import path
 
 from beancount.core import account_test
@@ -214,4 +215,4 @@ class TestDocumentsConstraints(account_test.TmpFilesTestBase, cmptest.TestCase):
 
 
 if __name__ == '__main__':
-    main()
+    unittest.main()

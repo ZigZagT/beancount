@@ -1,6 +1,8 @@
 __copyright__ = "Copyright (C) 2014, 2016-2017  Martin Blais"
 __license__ = "GNU GPLv2"
 
+import unittest
+
 from beancount import loader
 from beancount.core import data
 from beancount.plugins import tag_pending
@@ -40,4 +42,4 @@ class TestExampleTrackPending(test_utils.TestCase):
 
 
 if __name__ == '__main__':
-    main()
+    unittest.main()

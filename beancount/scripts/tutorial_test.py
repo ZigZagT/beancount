@@ -5,6 +5,7 @@ import os
 import shutil
 import tempfile
 from os import path
+import unittest
 
 from beancount.utils import test_utils
 from beancount.scripts import tutorial
@@ -28,4 +29,4 @@ class TestTutorial(test_utils.TestCase):
 
 
 if __name__ == '__main__':
-    main()
+    unittest.main()

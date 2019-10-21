@@ -5,6 +5,7 @@ import tempfile
 import datetime
 import re
 import subprocess
+import unittest
 
 from beancount.core import data
 from beancount.utils import test_utils
@@ -301,4 +302,4 @@ class TestHLedgerConversion(test_utils.TestCase):
 
 
 if __name__ == '__main__':
-    main()
+    unittest.main()

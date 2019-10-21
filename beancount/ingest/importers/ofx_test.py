@@ -3,6 +3,7 @@ __license__ = "GNU GPLv2"
 
 import datetime
 import re
+import unittest
 
 import bs4
 
@@ -532,4 +533,4 @@ class TestOFXImporter(cmptest.TestCase):
 
 
 if __name__ == '__main__':
-    main()
+    unittest.main()

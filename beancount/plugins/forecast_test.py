@@ -2,6 +2,7 @@ __copyright__ = "Copyright (C) 2014-2017  Martin Blais"
 __license__ = "GNU GPLv2"
 
 import textwrap
+import unittest
 
 from beancount import loader
 from beancount.parser import cmptest
@@ -64,4 +65,4 @@ class TestExampleForecast(cmptest.TestCase):
 
 
 if __name__ == '__main__':
-    main()
+    unittest.main()

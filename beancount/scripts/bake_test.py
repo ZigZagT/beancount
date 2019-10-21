@@ -5,6 +5,7 @@ import os
 import textwrap
 from os import path
 from unittest import mock
+import unittest
 
 import lxml.html
 
@@ -271,4 +272,4 @@ class TestScriptArchive(TestScriptBake):
 
 
 if __name__ == '__main__':
-    main()
+    unittest.main()

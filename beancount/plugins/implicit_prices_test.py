@@ -1,6 +1,8 @@
 __copyright__ = "Copyright (C) 2015-2017  Martin Blais"
 __license__ = "GNU GPLv2"
 
+import unittest
+
 from beancount.core.number import D
 from beancount.core import data
 from beancount.parser import cmptest
@@ -311,4 +313,4 @@ class TestImplicitPrices(cmptest.TestCase):
 
 
 if __name__ == '__main__':
-    main()
+    unittest.main()

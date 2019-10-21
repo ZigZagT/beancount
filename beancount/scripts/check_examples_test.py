@@ -5,6 +5,7 @@ __license__ = "GNU GPLv2"
 
 import os
 from os import path
+import unittest
 
 from beancount.utils import test_utils
 from beancount.scripts import check
@@ -34,4 +35,4 @@ class TestCheckExamples(test_utils.TestCase):
 
 
 if __name__ == '__main__':
-    main()
+    unittest.main()

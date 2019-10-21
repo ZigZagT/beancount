@@ -2,6 +2,7 @@ __copyright__ = "Copyright (C) 2014, 2016  Martin Blais"
 __license__ = "GNU GPLv2"
 
 from os import path
+import unittest
 
 from beancount.utils import test_utils
 from beancount.projects import export
@@ -19,4 +20,4 @@ class TestExport(test_utils.TestCase):
 
 
 if __name__ == '__main__':
-    main()
+    unittest.main()

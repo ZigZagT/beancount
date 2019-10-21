@@ -11,6 +11,7 @@ import subprocess
 import tarfile
 import re
 from os import path
+import unittest
 
 from beancount.utils import test_utils
 
@@ -169,4 +170,4 @@ class TestSetup(test_utils.TestCase):
 
 
 if __name__ == '__main__':
-    main()
+    unittest.main()
