@@ -34,7 +34,6 @@ __license__ = "GNU GPLv2"
 from beancount.core.data import Transaction
 from beancount.core import account_types
 from beancount.parser import options
-from beancount.parser import printer
 
 
 __plugins__ = ('divert_expenses',)
@@ -90,7 +89,6 @@ def replace_diverted_accounts(entry, replacement_account, acctypes):
         if (divert is True or (
                 divert is None and
                 account_types.is_account_type(acctypes.expenses, posting.account))):
-            print(posting)
             posting = posting._replace(account=replacement_account,
                                        meta={'diverted_account': posting.account})
         new_postings.append(posting)
