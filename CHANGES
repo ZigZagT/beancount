@@ -4,6 +4,24 @@
 Note: This file contains a list changes in the 'default' branch.
 
 
+2020-05-02
+
+ - Minor performance improvment by avoiding calling __iadd__ in a few places.
+ - Fixed bug due to the removal of __version__ in apiclient:
+   https://github.com/googleapis/google-api-python-client/commit/1d8ec6874e1c6081893de7cd7cbc86d1f6580320
+ - Changes all imports from 'apiclient' to 'googleapiclient', which is now the
+   recommended way.
+ - Fixed some warnings.
+ - Disabled expensive assertions in Inventory class and implemented a special
+   case for adding to an empty inventory to avoid expensive aggregation. This
+   can occur in aggregation loops and is unnecessarily expensive when adding a
+   single, very large inventory.
+ - Made balance check aggregation avoid an initial empty inventory object, and
+   changed the balance check code to call the realization utility function
+   compute_balance().
+ - Fixed bean-bake to honor all the bean-web options.
+
+
 2020-04-11
 
  - Fixed #425: Tentative bug fix for crash on decref over null traceback. The
@@ -67,6 +85,8 @@ Note: This file contains a list changes in the 'default' branch.
    of rows up or down sheet should avoid most of these problems (except when at
    the boundary, but then the minimum number of rows could just be increased).
    This is quick fix that should work in the medium term.
+
+
 
 2019-10-20
 
