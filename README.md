@@ -1,5 +1,11 @@
 # Beancount
 
+# Important Update
+Beancount is now fully hosted on GitHub https://github.com/beancount/beancount
+
+This fork here is not usefull anymore.
+
+
 [![Build Status](https://travis-ci.com/BananaWanted/beancount.svg?branch=master)](https://travis-ci.com/BananaWanted/beancount)
 
 This repo contains a fork of the [Beancount project][1]. Original documentations could be found [here on Google Doc](http://furius.ca/beancount/doc/index).
